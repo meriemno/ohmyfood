@@ -1,0 +1,64 @@
+
+%footer {
+
+
+    background-color: #353535;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+.footer {
+    
+    @extend %footer;
+    @media (min-width: 767.98px) {
+
+
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        column-gap: 40px;
+        padding-right: 130px;
+        padding-bottom: 10px;
+
+        &-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+    }
+
+    h3 {
+        padding-left: 10px;
+        font-family: $font-secondary;
+        padding-bottom: 0;
+
+    }
+
+    &-links a {
+        
+        color: white;
+        display: flex;
+        align-items: center;
+        margin: 8px;
+
+        i {
+            font-size: 10px;
+            width: 20px;
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+}

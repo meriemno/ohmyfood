@@ -1,0 +1,31 @@
+//variables
+$primary-color: rgb(147, 86, 220);
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$background-color: #f6f6f6;
+$btn-bg-color: linear-gradient(to top,$primary-color,$secondary-color);
+
+//Fonts
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Shrikhand', empattement;
+
+@mixin light-btn{
+
+    &:hover{
+
+      //  background-color: rgba(147, 86, 220,0);
+        transform: scale(1);
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
