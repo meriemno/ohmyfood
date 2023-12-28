@@ -291,7 +291,7 @@ p {
   align-self: last baseline;
   font-weight: 700;
   transform: translateX(50px);
-  transition: all 5s;
+  transition: all 500ms;
 }
 .card-restaurant .menu-item .check {
   display: inline;
@@ -300,7 +300,7 @@ p {
   border-radius: 0 15px 15px 0;
   border: none;
   transform: translateX(78px);
-  transition: all 5s;
+  transition: all 500ms;
 }
 @keyframes move-entrees {
   0% {
