@@ -6,13 +6,13 @@
 
 .container {
 
-   
 
 
-   
-        max-width: 1440px;
-        margin: 0 auto;
-    
+
+
+    // max-width: 1440px;
+    margin: 0 auto;
+
 
 
 
@@ -21,6 +21,8 @@
 
 body {
     margin: 0;
+    max-width: 1440px;
+    margin: 0 auto;
 
 }
 
@@ -32,20 +34,40 @@ a {
 img {
     object-fit: cover;
 }
-.conteneur{
-    background-color: hsla(0,0%,100%,.9);
+
+.title-section {
+    font-size: 24px;
+    font-weight: 600;
+
+}
+
+p {
+    padding: 0 10px;
+}
+
+.font-style {
+    font-family: $font-secondary;
+    font-size: 28px;
+}
+
+
+
+/****** loader **********/
+.conteneur {
+    background-color: hsla(0, 0%, 100%, .9);
     width: 100%;
     height: 100vh;
     position: fixed;
-    
+
     z-index: 100;
     animation: back 2s linear;
     animation-delay: 2s;
     animation-fill-mode: forwards;
 }
+
 .loading {
 
-    background-color:lighten($primary-color, 20%);  ;
+    background-color: lighten($primary-color, 20%);
     position: absolute;
     left: 50%;
     top: 50%;
@@ -53,7 +75,7 @@ img {
     transform: translate(-50%, -50%);
     color: $tertiary-color;
     animation: hide 2s linear;
-    
+
     animation-delay: 2s;
     animation-fill-mode: forwards;
 
@@ -66,13 +88,15 @@ img {
         letter-spacing: 5px;
         font-family: $font-secondary;
         line-height: 1;
+
         // mix-blend-mode: hue;
-@media (min-width: 768px) {
-    font-size: 150px;
-}
-@media (min-width: 1000px) {
-    font-size: 200px;
-}
+        @media (min-width: 768px) {
+            font-size: 150px;
+        }
+
+        @media (min-width: 1000px) {
+            font-size: 200px;
+        }
 
     }
 
@@ -106,7 +130,7 @@ img {
         }
 
         50% {
-            //left: calc(100% - 100px);
+            
             left: calc(100% - 100px);
 
         }
@@ -127,6 +151,7 @@ img {
             left: -1000%;
         }
     }
+
     @keyframes back {
         0% {
             opacity: 1;

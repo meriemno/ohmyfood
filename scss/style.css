@@ -4,12 +4,13 @@
 }
 
 .container {
-  max-width: 1440px;
   margin: 0 auto;
 }
 
 body {
   margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 a {
@@ -22,6 +23,21 @@ img {
      object-fit: cover;
 }
 
+.title-section {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  padding: 0 10px;
+}
+
+.font-style {
+  font-family: "Shrikhand", empattement;
+  font-size: 28px;
+}
+
+/****** loader **********/
 .conteneur {
   background-color: hsla(0, 0%, 100%, 0.9);
   width: 100%;
@@ -121,6 +137,22 @@ img {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+.localisation .restaurants .restaurants-style .restaurants-cards .card .btn-secondary {
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: 700;
+  width: 80px;
+  height: 29px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
 /*******page menu restaurant********/
 .img-menu img {
   height: 300px;
@@ -153,10 +185,6 @@ img {
 @media (min-width: 1000px) {
   .card-restaurant {
     width: 80%;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 250px;
   }
 }
 .card-restaurant .entrees {
@@ -195,7 +223,6 @@ img {
   position: absolute;
   right: 35px;
   top: 35px;
-  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .card-restaurant .card-txt .heart {
@@ -225,15 +252,17 @@ img {
 .card-restaurant .menu-item {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   align-items: center;
-  border: 2px solid #f6f6f6;
   border-radius: 15px;
   background-color: white;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .card-restaurant .menu-item:hover .check {
-  display: flex;
-  animation: move-check 200ms linear 3s forwards;
+  transform: translate(0px);
+}
+.card-restaurant .menu-item:hover .price {
+  transform: translateX(0px);
 }
 .card-restaurant .menu-item .menu-txt {
   white-space: nowrap;
@@ -260,25 +289,18 @@ img {
   display: flex;
   justify-items: flex-end;
   align-self: last baseline;
-  margin: 11px;
   font-weight: 700;
+  transform: translateX(50px);
+  transition: all 5s;
 }
 .card-restaurant .menu-item .check {
-  margin: -15px -3px -16px 0;
+  display: inline;
   background-color: #c1ede2;
   padding: 20px 20px;
   border-radius: 0 15px 15px 0;
-  display: none;
   border: none;
-}
-@keyframes move-check {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  transform: translateX(78px);
+  transition: all 5s;
 }
 @keyframes move-entrees {
   0% {
@@ -378,21 +400,8 @@ img {
   flex-direction: row;
 }
 
-.title-section {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-p {
-  padding: 0 10px;
-}
-
-.font-style {
-  font-family: "Shrikhand", empattement;
-  font-size: 28px;
-}
-
-/******page d'accueil********/
+/******page d'accueil mobile/desktop********/
+/********** debut header **********/
 header {
   display: flex;
   justify-content: center;
@@ -414,23 +423,13 @@ header img {
   width: 200px;
 }
 
+/******fin header **********/
+/********** contenu principal **********/
 .localisation .localisation-form {
   text-align: center;
   background-color: #f6f6f6;
   width: 100%;
   padding: 0 0 30px 0;
-  /*
-  // button {
-  //     color: white;
-  //     border-radius: 20px;
-  //     padding: 10px;
-  //     font-size: 16px;
-  //     background: linear-gradient(to top left, $primary-color, $secondary-color);
-  //     border: none;
-  //     font-weight: 500;
-  //     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-
-  // }*/
 }
 .localisation .localisation-form .input-form {
   justify-content: center;
@@ -488,8 +487,8 @@ header img {
   list-style-type: none;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0;
   gap: 20px;
+  padding-left: 30px;
 }
 @media (min-width: 1000px) {
   .localisation .steps .section-content .steps-list {
@@ -498,10 +497,12 @@ header img {
 }
 .localisation .steps .section-content .steps-list .steps-item {
   padding: 0;
+  width: 90%;
   max-width: 335px;
+  width: 300px;
   min-width: 250px;
   display: inline-flex;
-  gap: 20px;
+  gap: 10px;
   border: 2px solid #f6f6f6;
   margin-bottom: 20px;
   padding: 15px;
@@ -564,31 +565,13 @@ header img {
     -moz-column-gap: 100px;
          column-gap: 100px;
     row-gap: 50px;
-  }
-}
-@media (min-width: 1000px) {
-  .localisation .restaurants .restaurants-style .restaurants-cards {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    -moz-column-gap: 100px;
-         column-gap: 100px;
-    row-gap: 50px;
     padding-left: 30px;
   }
 }
 .localisation .restaurants .restaurants-style .restaurants-cards a {
   width: 100%;
 }
-@media (min-width: 768px) {
-  .localisation .restaurants .restaurants-style .restaurants-cards a {
-    width: 40%;
-  }
-}
-@media (min-width: 1000px) {
+@media (min-width: 768px) or (min-width: 1000px) {
   .localisation .restaurants .restaurants-style .restaurants-cards a {
     width: 40%;
   }
@@ -614,6 +597,7 @@ header img {
   align-items: center;
   border: none;
   padding-right: 20px;
+  /******* heart  card *******/
 }
 .localisation .restaurants .restaurants-style .card-add i {
   font-size: 20px;

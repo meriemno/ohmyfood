@@ -29,8 +29,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // box-sizing: border-box;
-
+    
 
     @media (min-width: 768px) {
 
@@ -48,10 +47,7 @@
 
 
         width: 80%;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        margin-top: 250px;
+        
 
 
     }
@@ -81,19 +77,14 @@
         .items {
 
             display: flex;
-            flex-direction: column;
-            //width: 100%;
+            flex-direction: column;            
             gap: 12px;
-
-
 
             @media (min-width: 768px) {
 
-                width: 634px;
+                width: 634px;              
 
             }
-
-
 
         }
 
@@ -113,8 +104,8 @@
             position: absolute;
             right: 35px;
             top: 35px;
-        
-            box-sizing: border-box;
+            
+           
             @media (min-width: 768px) {
                 position: relative;
                 right: 80px;
@@ -131,13 +122,11 @@
 
 
         i {
-            // font-size: 30px;
-            position: absolute;
             
+            position: absolute;
 
-            // @media (min-width: 768px) {
-            //     //width: 25%;
-            // }
+
+           
         }
 
         .fa-solid {
@@ -159,28 +148,33 @@
     }
 
     .menu-item {
-        // width: 100%;
+       
         display: flex;
         justify-content: space-between;
-
-
+        overflow: hidden;
         align-items: center;
-        border: 2px solid $background-color;
+        
         border-radius: 15px;
         background-color: white;
-        //padding: 3px 15px;
 
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        //animation: move-check 3s linear;
+
 
 
         &:hover {
             & .check {
-                display: flex;
-                animation: move-check 200ms linear 3s forwards;
+              
+              transform: translate(0px);
+               
+               
+               
+            }
 
+            & .price {
+                transform: translateX(0px);
 
             }
+           
         }
 
         .menu-txt {
@@ -188,6 +182,7 @@
             white-space: nowrap;
             overflow: hidden;
             width: 100%;
+           // background-color: red;
 
             &-title {
                 font-weight: 600;
@@ -209,55 +204,43 @@
             h4 {
                 font-weight: 600;
                 font-size: 18px;
+                
 
             }
         }
 
         .price {
             display: flex;
-            //background-color: palegoldenrod;
             justify-items: flex-end;
             align-self: last baseline;
-
-            margin: 11px;
-
-
             font-weight: 700;
+            transform: translateX(50px);
+            transition: all 5s;
 
 
         }
 
         .check {
-            margin: -15px -3px -16px 0;
-
+            //margin: -15px -3px -16px 0;
+          display: inline;
             background-color: lighten($tertiary-color, 10%);
             padding: 20px 20px;
+            
             border-radius: 0 15px 15px 0;
-            display: none;
+         
+
             border: none;
-
-
-
-        }
-
-        @keyframes move-check {
-            0% {
-
-                //opacity:0 ;
-                transform: scale(0.5);
-
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
+            transform: translateX(78px);
+            transition: all 5s;
+           
 
         }
+
+
 
         @keyframes move-entrees {
             0% {
-                // display: flex;
+
                 opacity: 0;
                 transform: translateX(-300px);
             }

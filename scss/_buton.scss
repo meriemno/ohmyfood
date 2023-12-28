@@ -5,18 +5,33 @@
     border-radius: 25px;
     padding: 15px;
     font-size: 16px;
-    background:$btn-bg-color;
+    background: $btn-bg-color;
     border: none;
     font-weight: 500;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     width: 250px;
     height: 50px;
     transition: all 200ms;
-   
+
     @include light-btn;
 }
-   
+
+%btn-tertiary {
+
+    background-color: $tertiary-color;
+    color: #008766;
+    font-weight: 700;
+    width: 80px;
+    height: 29px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
 
-    
+    position: absolute;
+    right: 30px;
+    top: 20px;
 
+}

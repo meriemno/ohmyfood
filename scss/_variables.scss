@@ -19,6 +19,18 @@ $font-secondary: 'Shrikhand', empattement;
     }
     
 }
+@mixin style-cards{
+
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 100px;
+  row-gap: 50px;
+  padding-left: 30px;
+}
 
 
 
