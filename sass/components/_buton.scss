@@ -1,4 +1,4 @@
-@import 'variables';
+
 
 %btn {
     color: white;
@@ -8,9 +8,11 @@
     background: $btn-bg-color;
     border: none;
     font-weight: 500;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    width: 250px;
+   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    width: 218px;
     height: 50px;
+    
     transition: all 200ms;
 
     @include light-btn;
