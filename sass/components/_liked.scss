@@ -1,0 +1,19 @@
+%liked{
+
+    .fa-solid {
+        opacity: 0;
+        transition: 2s;
+
+    }
+
+    .fa-solid:hover {
+        opacity: 1;
+        color: transparent;
+
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+        background-clip: text;
+        -webkit-background-clip: text;
+
+    }
+
+}

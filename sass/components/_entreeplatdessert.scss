@@ -1,0 +1,58 @@
+%entreeplatdessert{
+
+
+
+    .entrees {
+
+        animation: move-entrees 1s linear;
+    }
+
+    .plats {
+
+        animation: move-plats 1.5s linear;
+    }
+
+    .desserts {
+        animation: move-desserts 1.8s linear;
+
+    }
+
+
+@keyframes move-entrees {
+    0% {
+
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+
+
+}
+
+@keyframes move-plats {
+    0% {
+
+        opacity: 0;
+        transform: translate(300px);
+    }
+
+
+
+
+}
+
+@keyframes move-desserts {
+    from {
+
+        opacity: 0;
+        transform: translate(-300px);
+    }
+
+
+
+}
+}

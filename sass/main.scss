@@ -4,17 +4,27 @@
 
 @import './base/utilities';
 
+@import './utils/mixins';
+
 @import './components/buton';
+@import './components/loader';
+@import './components/liked';
+@import './components/entreeplatdessert';
+@import './components/check';
+
+
 
 
 @import './layouts/footer';
 @import './layouts/flexbox';
 @import './layouts/header';
+@import './layouts/localisation-form';
+@import './layouts/steps';
+@import './layouts/restaurants';
+
 
 @import './pages/pagemenu';
-@import './pages/localisation-form';
-@import './pages/steps';
-@import './pages/restaurants';
+
 
 
 

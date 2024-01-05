@@ -1,0 +1,65 @@
+
+%check{
+    
+&:hover {
+    & .cloche {
+        transform: translateX(0px);
+
+        .check {
+            transform: translateX(0px);
+        }
+    }
+
+    & .price {
+        transform: translate(0px);
+    }
+
+    h4,
+    .description {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.cloche {
+    display: flex;
+    gap: 70px;
+
+
+
+    .check {
+        background-color: lighten($tertiary-color, 10%);
+        width: 59px;
+
+        border-radius: 0 15px 15px 0;
+        transform: translateX(60px);
+        transition: all 0.5s;
+        border: none;
+
+
+    }
+}
+
+.price {
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    align-items: end;
+    justify-content: flex-end;
+
+    padding: 0px;
+    width: 108px;
+    transform: translateX(50px);
+    padding-right: 5px;
+
+
+
+    transition: all 0.5s;
+
+    @media (min-width: 768px) {
+        width: 91px;
+
+    }
+}
+}
