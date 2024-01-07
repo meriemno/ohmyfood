@@ -6,9 +6,11 @@ header {
     .logo {
 
         display: flex;
+        flex-direction: column;
+        align-items: flex-end;
         justify-content: center;
         padding: 14px 19% 13px 19%;
-       
+       //background-color: red;
 
 
     }
@@ -19,7 +21,7 @@ header {
        
         position: absolute;
         left: 17px;
-        top: 40px;
+        top: 20px;
         font-size: 25px;
         color: #353535;
 
