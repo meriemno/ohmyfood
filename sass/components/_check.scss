@@ -29,7 +29,7 @@
 
 
     .check {
-        background-color: lighten($tertiary-color, 10%);
+        background-color:$tertiary-color;
         width: 59px;
 
         border-radius: 0 15px 15px 0;
