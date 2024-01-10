@@ -6,6 +6,7 @@
     position: fixed;
 
     z-index: 100;
+
     animation: back 2s linear;
     animation-delay: 2s;
     animation-fill-mode: forwards;
@@ -20,6 +21,7 @@
     z-index: 1000;
     transform: translate(-50%, -50%);
     color: $tertiary-color;
+
     animation: hide 2s linear;
 
     animation-delay: 2s;
@@ -35,7 +37,7 @@
         font-family: $font-secondary;
         line-height: 1;
 
-        // mix-blend-mode: hue;
+       
         @media (min-width: 768px) {
             font-size: 150px;
         }
@@ -70,7 +72,7 @@
 
     @keyframes move {
 
-        0% {
+        0%, 100% {
             left: 0;
 
         }
