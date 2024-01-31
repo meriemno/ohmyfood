@@ -12,6 +12,7 @@
         background: var(--Button-Gradient, linear-gradient(193deg, $primary-color -11.44%, $secondary-color 123.93%));
         background-clip: text;
         -webkit-background-clip: text;
+        -moz-background-clip: text;
 
     }
 
